@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tesla Clone</title>
+    <meta name="keywords" content="motors, electric, energy, drive, buy">
+    <meta name="description" content="clone of tesla motors To practice layout and design">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/prescript.js"></script>
+
+</head>
+
+<body class="py-font-family" id="body-animation">
+    <header class="tsl-header">
+        <div class="nav-banner-top">
+            <div class="nav-banner-an" id="display-nav-banner">
+                <div class="nav-banner py-font-color py-font-family letter-space text-center">
+                    <h1 class="py-font-size nav-banner-transition">$7,500 Federal Tax Credit</h1>
+                    <p class="sy-font-size nav-banner-transition px-3">Available for new Model 3, Model Y and certain
+                        Model X. Reductions to tax credit likely after Dec 31.</p>
+                    <a class="btn sy-font-size py-font-color" href="#" id="nav-banner-popup">See Details</a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <section class="nav py-font-color d-flex justify-content-between align-items-center">
+                <a class="tsl-logo-link" href="#">
+                    <svg class="tsl-logo-icon tsl-nav-effect py-font-color" viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z"
+                            fill="currentColor"></path>
+                    </svg>
+                </a>
+                <div class="tsl-site-nav-item">
+                    <button type="button" class="tsl-site-nav-btn-menu py-font-color" id="tsl-site-nav-btn"><span
+                            class="tsl-site-nav-item-text tsl-nav-effect">Menu</span></button>
+                </div>
+                <div class="tsl-nav-menu-ws">
+                    <ol class="d-flex gap-3">
+                        <li>
+                            <button type="button" class="btn btn-site-nav-ws py-font-color"><span
+                                class="tsl-site-nav-item-text tsl-nav-effect">Vehicles</span></button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-site-nav-ws py-font-color"><span
+                                class="tsl-site-nav-item-text tsl-nav-effect">Energy</span></button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-site-nav-ws py-font-color"><span
+                                class="tsl-site-nav-item-text tsl-nav-effect">Charging</span></button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-site-nav-ws py-font-color"><span
+                                class="tsl-site-nav-item-text tsl-nav-effect">Discover</span></button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-site-nav-ws py-font-color"><span
+                                class="tsl-site-nav-item-text tsl-nav-effect">Shop</span></button>
+                        </li>
+                    </ol>
+                </div>
+                <div class="tsl-nav-icons-ws">
+                    <ol class="d-flex tsl-logo-link">
+                        <li>
+                            <a class="py-font-color tsl-nav-effect" href="#">
+                                <svg class="tsl-modal-close-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 20.5a8.5 8.5 0 1 1 0-17 8.5 8.5 0 0 1 0 17Zm0 1.5c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Zm0-6a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm.053-3.533a7.8 7.8 0 0 1 .92-.767 6.97 6.97 0 0 0 .746-.61 2.31 2.31 0 0 0 .468-.635c.126-.253.188-.548.188-.883 0-.374-.082-.723-.246-1.048-.158-.324-.415-.588-.771-.792-.356-.203-.81-.305-1.362-.305-.575 0-1.045.116-1.411.347a1.991 1.991 0 0 0-.788.89c-.06.134-.11.272-.148.413-.111.414-.445.767-.874.767-.428 0-.784-.35-.71-.772.07-.407.2-.79.386-1.15.301-.583.758-1.048 1.37-1.394C10.435 6.176 11.185 6 12.07 6c.93 0 1.687.181 2.273.544.59.358 1.014.803 1.271 1.337.257.533.386 1.07.386 1.608 0 .545-.085 1.012-.254 1.403-.17.385-.375.698-.616.94-.235.242-.55.514-.943.817-.312.247-.561.46-.747.635-.18.176-.33.385-.451.627-.05.099-.087.2-.113.302-.108.424-.422.787-.86.787-.437 0-.806-.356-.76-.79a2.948 2.948 0 0 1 .797-1.743Z"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="py-font-color tsl-nav-effect" href="#">
+                                <svg class="tsl-modal-close-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10ZM9.254 20.047a8.147 8.147 0 0 1-.768-1.378c-.404-.91-.722-1.985-.935-3.169h-3.3a8.526 8.526 0 0 0 5.003 4.547Zm.603-1.988c.336.757.718 1.324 1.103 1.69.382.364.732.501 1.04.501.308 0 .658-.137 1.04-.5.385-.367.767-.934 1.103-1.69.321-.723.588-1.59.78-2.56H9.076c.192.97.459 1.837.78 2.56ZM8.75 12c0 .691.036 1.36.103 2h6.294c.067-.64.103-1.309.103-2 0-.691-.036-1.36-.103-2H8.853c-.067.64-.103 1.309-.103 2Zm-1.405-2H3.737a8.522 8.522 0 0 0-.237 2c0 .689.082 1.359.237 2h3.608a20.75 20.75 0 0 1 0-4Zm1.732-1.5h5.845c-.19-.97-.458-1.837-.779-2.56-.336-.756-.718-1.323-1.103-1.69-.382-.363-.732-.5-1.04-.5-.308 0-.658.137-1.04.5-.385.367-.767.934-1.103 1.69-.321.723-.588 1.59-.78 2.56Zm7.577 1.5a20.728 20.728 0 0 1 0 4h3.61a8.52 8.52 0 0 0 .236-2 8.52 8.52 0 0 0-.237-2h-3.609Zm3.094-1.5a8.526 8.526 0 0 0-5.002-4.547c.287.408.543.873.768 1.378.404.91.722 1.985.935 3.169h3.3Zm-12.197 0c.213-1.184.531-2.26.935-3.169.225-.505.48-.97.768-1.378A8.526 8.526 0 0 0 4.252 8.5h3.3Zm7.963 10.169c-.225.505-.48.97-.768 1.378a8.526 8.526 0 0 0 5.002-4.547h-3.3c-.212 1.184-.53 2.26-.934 3.169Z"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="py-font-color tsl-nav-effect" href="#">
+                                <svg class="tsl-modal-close-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM6.858 18.752c.605-1.868 2.722-3.24 5.142-3.24 2.42 0 4.537 1.372 5.142 3.24C15.712 19.844 13.933 20.5 12 20.5s-3.712-.656-5.142-1.748zm11.469-1.095c-1.02-2.165-3.483-3.645-6.327-3.645s-5.307 1.48-6.327 3.645A8.456 8.456 0 0 1 3.5 12c0-4.687 3.813-8.5 8.5-8.5 4.687 0 8.5 3.813 8.5 8.5a8.456 8.456 0 0 1-2.173 5.657zM12 6a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0 5.5c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"></path></svg>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+        </nav>
+    </header>
+
+    <main class="tsl-main">
+        <section class="tsl-main-container">
+            <div class="tsl-main-hero d-flex justify-content-center position-relative">
+                <video class="tsl-main-hero-vid img"  autoplay loop muted playsinline>
+                    <source src="assets/Model-3-Main-Hero-Video-Desktop-NA.mp4" type="video/mp4">
+                </video>
+                <div class="tsl-main-hero-text position-absolute py-font-color">
+                    <h1>Model 3</h1>
+                    <h3>From $29.740*</h3>
+                    <p>After Federal Tax Credit & Est. Gas Savings</p>
+                </div>
+                <div class="tsl-main-hero-btn text-center position-absolute">
+                    <div class="tsl-main-hero-btns">
+                        <a class="btn btn-tsl-hero-white" href="#"><span>Order Now</span></a>
+                        <a class="btn btn-tsl-hero-black" href="#"><span>Demo Drive</span></a>
+                    </div>
+                    <div class="py-font-color">
+                        <p>*Price before incentives and savings is $40,240, excluding taxes and fees. Subject to change.</p>
+                        <a class="btn py-font-color" href="#">Learn about est. gas savings.</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tsl-main-container tsl-nav-color-scroll">
+            <div class="tsl-main-hero d-flex justify-content-center position-relative">
+                <img class="img tsl-nav-color-scroll" src="assets/Homepage-Model-Y-Global-Desktop.jpeg" alt="model y">
+                <div class="tsl-main-hero-text position-absolute sy-font-color tsl-nav-color-scroll">
+                    <h1>Model Y</h1>
+                    <h3>From $39,390*</h3>
+                    <p>After Federal Tax Credit & Est. Gas Savings</p>
+                </div>
+                <div class="tsl-main-hero-btn text-center position-absolute">
+                    <div class="tsl-main-hero-btns tsl-nav-color-scroll">
+                        <a class="btn btn-tsl-hero-white" href="#"><span>Order Now</span></a>
+                        <a class="btn btn-tsl-hero-black" href="#"><span>Demo Drive</span></a>
+                    </div>
+                    <div class="sy-font-color tsl-nav-color-scroll">
+                        <p>*Price before incentives and savings is $50,490, excluding taxes and fees. Subject to change.</p>
+                        <a class="btn sy-font-color" href="#">Learn about est. gas savings.</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tsl-main-container tsl-nav-color-scroll">
+            <div class="tsl-main-hero d-flex justify-content-center position-relative">
+                <img class="img" src="assets/Homepage-Model-S-Desktop-LHD-6.22.jpeg" alt="model y">
+                <div class="tsl-main-hero-text position-absolute sy-font-color">
+                    <h1>Model S</h1>
+                    <h3>From $71,090*</h3>
+                    <p>After Est. Gas Savings</p>
+                </div>
+                <div class="tsl-main-hero-btn text-center position-absolute">
+                    <div class="tsl-main-hero-btns">
+                        <a class="btn btn-tsl-hero-white" href="#"><span>Order Now</span></a>
+                        <a class="btn btn-tsl-hero-black" href="#"><span>Demo Drive</span></a>
+                    </div>
+                    <div class="sy-font-color">
+                        <p>*Price before savings is $74,990, excluding taxes and fees. Subject to change.</p>
+                        <a class="btn sy-font-color" href="#">Learn about est. gas savings.</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tsl-main-container tsl-nav-color-scroll">
+            <div class="tsl-main-hero d-flex justify-content-center position-relative">
+                <img class="img" src="assets/Homepage-Model-X-Desktop-LHD.jpeg" alt="model y">
+                <div class="tsl-main-hero-text position-absolute sy-font-color">
+                    <h1>Model X</h1>
+                    <h3>From $68,590*</h3>
+                    <p>After Federal Tax Credit & Est. Gas Savings</p>
+                </div>
+                <div class="tsl-main-hero-btn text-center position-absolute">
+                    <div class="tsl-main-hero-btns">
+                        <a class="btn btn-tsl-hero-white" href="#"><span>Order Now</span></a>
+                        <a class="btn btn-tsl-hero-black" href="#"><span>Demo Drive</span></a>
+                    </div>
+                    <div class="sy-font-color">
+                        <p>*Price before incentives and savings is $79,990, excluding taxes and fees. Subject to change.</p>
+                        <a class="btn sy-font-color" href="#">Learn about est. gas savings.</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tsl-main-container">
+            <div class="tsl-main-hero d-flex justify-content-center position-relative">
+                <video class="tsl-main-hero-vid img"  autoplay loop muted playsinline>
+                    <source src="assets/Homepage-Demo-Drive-Desktop-NA.webm" type="video/mp4">
+                </video>
+                <div class="tsl-main-hero-text position-absolute py-font-color">
+                    <h1>Experience Tesla</h1>
+                    <h3>Schedule a Demo Drive Today</h3>
+                </div>
+                <div class="tsl-main-hero-btn text-center position-absolute">
+                    <div class="tsl-main-hero-btns">
+                        <a class="btn btn-tsl-hero-black btn-tsl-hero-demo " href="#"><span>Demo Drive</span></a>
+                    </div>
+                    <div class="py-font-color">
+                        <p>*Price before incentives and savings is $40,240, excluding taxes and fees. Subject to change.</p>
+                        <a class="btn py-font-color" href="#">Learn about est. gas savings.</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tsl-main-container tsl-nav-color-scroll">
+            <div class="tsl-main-hero d-flex justify-content-center position-relative">
+                <img class="img" src="assets/425_HP_SolarPanels_D.jpeg" alt="model y">
+                <div class="tsl-main-hero-text position-absolute sy-font-color">
+                    <h1>Solar Panels</h1>
+                    <a class="btn sy-font-color">After Federal Tax Credit & Est. Gas Savings</a>
+                </div>
+                <div class="tsl-main-hero-btn text-center position-absolute">
+                    <div class="tsl-main-hero-btns tsl-main-hero-btns-solar">
+                        <a class="btn btn-tsl-hero-white" href="#"><span>Order Now</span></a>
+                        <a class="btn btn-tsl-hero-black" href="#"><span>Learn More</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tsl-main-container tsl-nav-color-scroll">
+            <div class="tsl-main-hero d-flex justify-content-center position-relative">
+                <img class="img" src="assets/Homepage-SolarRoof-Desktop-Global.jpeg" alt="model y">
+                <div class="tsl-main-hero-text position-absolute sy-font-color">
+                    <h1>Solar Roof</h1>
+                    <p class="btn sy-font-color">Produce Clean Energy From Your Roof</p>
+                </div>
+                <div class="tsl-main-hero-btn text-center position-absolute">
+                    <div class="tsl-main-hero-btns tsl-main-hero-btns-solar">
+                        <a class="btn btn-tsl-hero-white" href="#"><span>Order Now</span></a>
+                        <a class="btn btn-tsl-hero-black" href="#"><span>Learn More</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tsl-main-container tsl-nav-color-scroll">
+            <div class="tsl-main-hero d-flex justify-content-center position-relative">
+                <img class="img" src="assets/Homepage-Powerwall-Desktop.jpeg" alt="model y">
+                <div class="tsl-main-hero-text position-absolute sy-font-color">
+                    <h1>Powerwall</h1>
+                </div>
+                <div class="tsl-main-hero-btn text-center position-absolute">
+                    <div class="tsl-main-hero-btns tsl-main-hero-btns-solar">
+                        <a class="btn btn-tsl-hero-white" href="#"><span>Order Now</span></a>
+                        <a class="btn btn-tsl-hero-black" href="#"><span>Learn More</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tsl-main-container tsl-nav-color-scroll">
+            <div class="tsl-main-hero d-flex justify-content-center position-relative">
+                <img class="img" src="assets/Homepage-Accessories-Desktop-NA-APAC.jpeg" alt="accessories">
+                <div class="tsl-main-hero-text position-absolute sy-font-color">
+                    <h1>Accessories</h1>
+                </div>
+                <div class="tsl-main-hero-btn text-center position-absolute w-100 my-0">
+                    <div class="tsl-main-hero-btns">
+                        <a class="btn btn-tsl-hero-black btn-tsl-hero-demo " href="#"><span>Shop Now</span></a>
+                    </div>
+                    <footer id="tsl-footer">
+                        <ul class="tsl-ul-footer d-flex justify-content-center align-items-center my-0 py-3 gap-2 h-100">
+                            <li><a class="btn-tsl-footer" href="#">Tesla © 2023</a></li>
+                            <li><a class="btn-tsl-footer" href="#">Privacy & Legal</a></li>
+                            <li><a class="btn-tsl-footer" href="#">Vehicle Recalls</a></li>
+                            <li aria-hidden=false class="tsl-footer-hide"><a class="btn-tsl-footer" href="#">Contact</a></li>
+                            <li><a class="btn-tsl-footer" href="#">News</a></li>
+                            <li aria-hidden=false class="tsl-footer-hide"><a class="btn-tsl-footer" href="#">Get Updates</a></li>
+                            <li aria-hidden=false class="tsl-footer-hide"><a class="btn-tsl-footer" href="#">Locations</a></li>
+                        </ul>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <dialog aria-hidden="true" class="tsl-site-header-panel" id="tsl-header-panel">
+        <div class="tsl-site-header-panel-block">
+            <div class="tsl-site-header-panel-content">
+                <div class="tsl-site-header-panel-items">
+                    <ol class="tsl-site-header-panel-ol">
+                        <li>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Vehicles-Model-S.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Model S</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Vehicles-Model-3.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Model 3</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Vehicles-Model-x.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Model x</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Vehicles-Model-y.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Model y</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="tsl-site-header-panel-divisor"></div>
+                <div class="tsl-site-header-panel-links">
+                    <ul class="tsl-site-header-panel-links-ul">
+                        <li><a class="btn btn-tsl-header-panel" href="#">Inventory</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Used Cars</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Demo Drive</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Trade-In</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Compare</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">fleet</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Cybertruck</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Semi</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Roadster</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tsl-site-header-panel-content">
+                <div class="tsl-site-header-panel-items">
+                    <ol class="tsl-site-header-panel-ol">
+                        <li>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Energy-Solar-Panels.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Solar Panels</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Energy-Solar-Roof.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Solar Roof</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Energy-Powerwall-US.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Power Wall</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Energy-Megapack.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Megapack</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="tsl-site-header-panel-divisor"></div>
+                <div class="tsl-site-header-panel-links">
+                    <ul class="tsl-site-header-panel-links-ul">
+                        <li><a class="btn btn-tsl-header-panel" href="#">Utilities</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Comercial</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Schedule a Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tsl-site-header-panel-content">
+                <div class="tsl-site-header-panel-items">
+                    <ol class="tsl-site-header-panel-ol">
+                        <li>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Charging-Charging.jpeg" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Charging</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Charging-Home-Charging.jpeg" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Home Charging</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Charging-Supercharging.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Supercharging</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="tsl-site-header-panel-divisor"></div>
+                <div class="tsl-site-header-panel-links">
+                    <ul class="tsl-site-header-panel-links-ul">
+                        <li><a class="btn btn-tsl-header-panel" href="#">Charging Calculator</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Trip Planing</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Supercharge Voting</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Host a Supercharger</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Comercial Charging</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Host Wall Conectors</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tsl-site-header-panel-content">
+
+                <div class="tsl-site-header-panel-links-discover">
+                    <ul class="tsl-site-header-panel-links-ul">
+                        <li><p>Resources</p></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Demo Drive</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Insurance</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Video Guide</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Customer Stories</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="tsl-site-header-panel-links-discover-1">
+                    <ul class="tsl-site-header-panel-links-ul">
+                        <li><p>Resources</p></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Demo Drive</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Insurance</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Video Guide</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Customer Stories</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="tsl-site-header-panel-links-discover-2">
+                    <ul class="tsl-site-header-panel-links-ul">
+                        <li><p>Resources</p></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Demo Drive</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Insurance</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Video Guide</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Customer Stories</a></li>
+                        <li><a class="btn btn-tsl-header-panel" href="#">Events</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="tsl-site-header-panel-content">
+
+                <div class="tsl-site-header-panel-links-shop">
+                    <ul class="tsl-site-header-panel-links-ul d-flex gap-3">
+                        <li><a class="btn btn-tsl-header-panel btn-tsl-header-panel-shop d-flex flex-column align-items-center py-font-weight" href="#">
+                            <span><img class="tsl-site-header-panel-img" src="assets/nav/Mega-Menu-Charging-Home-Charging.jpeg" alt="Charging"></span>
+                            Charging
+                        </a></li>
+                        <li><a class="btn btn-tsl-header-panel btn-tsl-header-panel-shop d-flex flex-column align-items-center py-font-weight" href="#">
+                            <span><img class="tsl-site-header-panel-img" src="assets/nav/Mega-Menu-Shop-Vehicle-Accessories.jpeg" alt="Charging"></span>
+                            Vehicle Accessories
+                        </a></li>
+                        <li><a class="btn btn-tsl-header-panel btn-tsl-header-panel-shop d-flex flex-column align-items-center py-font-weight" href="#">
+                            <span><img class="tsl-site-header-panel-img" src="assets/nav/Mega-Menu-Shop-Apparel.png" alt="Charging"></span>
+                            Apparel
+                        </a></li>
+                        <li><a class="btn btn-tsl-header-panel btn-tsl-header-panel-shop d-flex flex-column align-items-center py-font-weight" href="#">
+                            <span><img class="tsl-site-header-panel-img" src="assets/nav/Mega-Menu-Shop-Lifestyle.jpeg" alt="Charging"></span>
+                            lifestyle
+                        </a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="tsl-header-panel-bg"></div>
+    </dialog>
+    
+    <dialog aria-hidden="true" class="tsl-site-nav-menu">
+        <div class="tsl-modal-header d-flex justify-content-between flex-row-reverse align-items-center">
+            <button aria-label="Close Modal" class="btn tsl-close-nav-menu d-flex"
+                type="button">
+                <svg class="tsl-modal-close-icon" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor"
+                        d="M18.53 17.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.748.748 0 0 1-1.06 0 .75.75 0 0 1 0-1.06L10.94 12 5.47 6.53a.75.75 0 1 1 1.06-1.06L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="d-flex">
+            <ol class="tsl-nav-menu-ol">
+                <li>
+                    <button aria-hidden="false" type="button" class="btn tsl-site-nav-link d-flex">
+                        <span class="tsl-site-nav-link-text py-font-weight">
+                            Vehicles
+                        </span>
+                    </button>
+                    <content aria-hidden="true" class="hidde">
+                        <div class="tsl-site-nav-content">
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Vehicles-Model-S.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Model S</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Vehicles-Model-3.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Model 3</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Vehicles-Model-x.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Model x</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Vehicles-Model-y.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Model y</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tsl-mega-menu-panel-divider"></div>
+                    </content>
+                </li>
+                <li>
+                    <button type="button" class="btn tsl-site-nav-link d-flex">
+                        <span class="tsl-site-nav-link-text py-font-weight">
+                            Energy
+                        </span>
+                    </button>
+                    <content aria-hidden="true" class="hidde">
+                        <div class="tsl-site-nav-content">
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Energy-Solar-Panels.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">solar Panels</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Energy-Solar-Roof.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Solar Roof</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Energy-Powerwall-US.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Powerwall</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Energy-Megapack.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Megapack</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tsl-mega-menu-panel-divider"></div>
+                    </content>
+                </li>
+                <li>
+                    <button aria-hidden="false" type="button" class="btn tsl-site-nav-link d-flex">
+                        <span class="tsl-site-nav-link-text py-font-weight">
+                            Charging
+                        </span>
+                    </button>
+                    <content aria-hidden="true" class="hidde">
+                        <div class="tsl-site-nav-content">
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Charging-Charging.jpeg" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Carging</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Charging-Home-Charging.jpeg" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Home Charging</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tsl-site-nav-card">
+                                <div class="tsl-site-nav-card-img">
+                                    <a href="#">
+                                        <img class="tsl-site-nav-img" src="assets/nav/Mega-Menu-Charging-Supercharging.png" alt="car-1">
+                                    </a>
+                                </div>
+                                <div class="tsl-site-nav-card-links d-flex flex-column align-items-center">
+                                    <h3 class="py-font-weight">Supercharging</h3>
+                                    <div class="d-flex tsl-site-nav-links py-font-weight">
+                                        <a class="btn btn-site-nav" href="#">Learn</a>
+                                        <a class="btn btn-site-nav" href="#">Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tsl-mega-menu-panel-divider"></div>
+                    </content>
+                </li>
+                <li>
+                    <button aria-hidden="false" type="button" class="btn tsl-site-nav-link d-flex">
+                        <span class="py-font-weight">
+                            Discover
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button aria-hidden="false" type="button" class="btn tsl-site-nav-link d-flex">
+                        <span class="py-font-weight">
+                            Shop
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button aria-hidden="false" type="button" class="btn tsl-site-nav-link d-flex">
+                        <span class="py-font-weight">
+                            Support
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button aria-hidden="false" type="button" class="btn tsl-site-nav-link d-flex">
+                        <svg class="tsl-modal-close-icon tsl-icon-mob-nav" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10ZM9.254 20.047a8.147 8.147 0 0 1-.768-1.378c-.404-.91-.722-1.985-.935-3.169h-3.3a8.526 8.526 0 0 0 5.003 4.547Zm.603-1.988c.336.757.718 1.324 1.103 1.69.382.364.732.501 1.04.501.308 0 .658-.137 1.04-.5.385-.367.767-.934 1.103-1.69.321-.723.588-1.59.78-2.56H9.076c.192.97.459 1.837.78 2.56ZM8.75 12c0 .691.036 1.36.103 2h6.294c.067-.64.103-1.309.103-2 0-.691-.036-1.36-.103-2H8.853c-.067.64-.103 1.309-.103 2Zm-1.405-2H3.737a8.522 8.522 0 0 0-.237 2c0 .689.082 1.359.237 2h3.608a20.75 20.75 0 0 1 0-4Zm1.732-1.5h5.845c-.19-.97-.458-1.837-.779-2.56-.336-.756-.718-1.323-1.103-1.69-.382-.363-.732-.5-1.04-.5-.308 0-.658.137-1.04.5-.385.367-.767.934-1.103 1.69-.321.723-.588 1.59-.78 2.56Zm7.577 1.5a20.728 20.728 0 0 1 0 4h3.61a8.52 8.52 0 0 0 .236-2 8.52 8.52 0 0 0-.237-2h-3.609Zm3.094-1.5a8.526 8.526 0 0 0-5.002-4.547c.287.408.543.873.768 1.378.404.91.722 1.985.935 3.169h3.3Zm-12.197 0c.213-1.184.531-2.26.935-3.169.225-.505.48-.97.768-1.378A8.526 8.526 0 0 0 4.252 8.5h3.3Zm7.963 10.169c-.225.505-.48.97-.768 1.378a8.526 8.526 0 0 0 5.002-4.547h-3.3c-.212 1.184-.53 2.26-.934 3.169Z"></path></svg>
+                        <div class="d-flex flex-column">
+                            <span class="py-font-weight">
+                                United States
+                            </span>
+                            <p class="tsl-nav-paragraph py-font-weight">English</p>
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <button aria-hidden="false" type="button" class="btn tsl-site-nav-link d-flex">
+                        <svg class="tsl-modal-close-icon tsl-icon-mob-nav" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM6.858 18.752c.605-1.868 2.722-3.24 5.142-3.24 2.42 0 4.537 1.372 5.142 3.24C15.712 19.844 13.933 20.5 12 20.5s-3.712-.656-5.142-1.748zm11.469-1.095c-1.02-2.165-3.483-3.645-6.327-3.645s-5.307 1.48-6.327 3.645A8.456 8.456 0 0 1 3.5 12c0-4.687 3.813-8.5 8.5-8.5 4.687 0 8.5 3.813 8.5 8.5a8.456 8.456 0 0 1-2.173 5.657zM12 6a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0 5.5c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"></path></svg>
+                        <span class="py-font-weight">
+                            Account
+                        </span>
+                    </button>
+                </li>
+            </ol>
+        </div>
+    </dialog>
+
+
+    <div class="modal">
+        <div class="modal-content d-flex flex-column py-font-weight">
+            <div>
+                <span class="close-button">&times;</span>
+            </div>
+            <h2>$7,500 Federal Tax Credit</h2>
+            <p>Customers who take delivery of a qualified new Tesla and meet all federal requirements are eligible for a
+                tax credit up to $7,500. Reductions to current federal tax credit likely after Dec 31.</p>
+            <p><strong>Adjusted Gross Income Limitations</strong></p>
+            <ul class="tds-list tds-list--unordered" style="padding-bottom:14px">
+                <li style="margin-bottom:0px">$300,000 for married couples filing jointly</li>
+                <li style="margin-bottom:0px">$225,000 for heads of households</li>
+                <li style="margin-bottom:0px">$150,000 for all other filers</li>
+            </ul>
+            <p><strong>Price Caps</strong></p>
+            <p>The vehicle MSRP at time of delivery must not exceed the following caps. This price includes optional
+                equipment physically attached to the vehicle at the time of delivery and excludes software features,
+                accessories, taxes and fees.</p>
+            <ul class="tds-list tds-list--unordered" style="padding-bottom:14px">
+                <li style="margin-bottom:0px">Model 3: $55,000</li>
+                <li style="margin-bottom:0px">Model X: $80,000</li>
+                <li style="margin-bottom:0px">Model Y: $80,000</li>
+            </ul>
+            <p style="margin-bottom:0px"><a data-icon-name="null" data-tesla-link-styles=""
+                    href="/support/incentives#new-vehicles" link_icon_name="null" link_styles="[object Object]"
+                    data-tesla_locale_processed="1" class="tds-link">Learn More</a></p>
+            <p>Your eligibility for any tax credits depends on your personal tax situation. We recommend speaking with a
+                tax professional for guidance.</p>
+        </div>
+    </div>
+
+    <div class="tsl-modal-bg"></div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
